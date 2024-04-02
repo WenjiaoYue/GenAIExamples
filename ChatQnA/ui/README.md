@@ -6,6 +6,8 @@
 ![project-screenshot](https://i.imgur.com/fZbOiTk.png)
 ![project-screenshot](https://i.imgur.com/FnY3MuU.png)
 
+
+
 <h2>🧐 Features</h2>
 
 Here're some of the project's features:
@@ -24,9 +26,9 @@ Here're some of the project's features:
 2. cd command to the current folder.
 
 3. Modify the required .env variables.
-   ```
-   DOC_BASE_URL = ''
-   ```
+    ```
+    DOC_BASE_URL = ''
+    ```
 4. Execute `npm install` to install the corresponding dependencies.
 
-5. Execute `npm run dev` in both environments
+5. Execute `npm run dev` in both enviroments

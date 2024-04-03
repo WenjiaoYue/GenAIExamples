@@ -17,16 +17,18 @@
 >
 	<div
 		class={msg.role === 0
-			? "flex aspect-square w-[2px]  items-center justify-center rounded bg-[#92c8ff] max-sm:hidden"
-			: "flex aspect-square h-10 w-[2px] items-center justify-center rounded bg-[#0597ff] max-sm:hidden"}
+			? "flex aspect-square w-[2px]   items-center justify-center rounded bg-[#92c8ff] max-sm:hidden"
+			: "flex aspect-square h-10 w-[2px]  items-center justify-center rounded bg-[#0597ff] max-sm:hidden"}
 	>
 		<MessageAvatar role={msg.role} />
 	</div>
 	<div class="group relative items-center">
 		<div>
 			<p
-				class="leading-relaxed text-gray-700 max-w-[60vw] items-center whitespace-pre-line break-keep text-[1rem] leading-5 sm:max-w-[50rem]"
-			>
+				class={msg.role === 0
+					? "font-light  leading-relaxed  max-w-[60vw] items-center whitespace-pre-line break-keep text-[1rem] leading-5 sm:max-w-[50rem]"
+					: " leading-relaxed  max-w-[60vw] items-center whitespace-pre-line break-keep text-[1rem] leading-5 sm:max-w-[50rem]" }
+					>
 				{@html msg.content}
 			</p>
 		</div>

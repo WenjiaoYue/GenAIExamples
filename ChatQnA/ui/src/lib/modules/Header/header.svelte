@@ -29,7 +29,7 @@
           <IntelLogo />
         <span
           class="self-center whitespace-nowrap text-2xl font-semibold text-white ml-4"
-          data-svelte-h="svelte-1hbktnk">ChatQnA</span
+          data-svelte-h="svelte-1hbktnk">ChatBot</span
         >
         <!-- <div class="w-full ms-auto lg:block lg:w-auto order-1 lg:order-none">
           <ul

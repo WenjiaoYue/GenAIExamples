@@ -49,27 +49,49 @@
 	}
 
 	function storeMessages() {
-		console.log('localStorage', chatMessages);
-		
+		console.log("localStorage", chatMessages);
+
 		localStorage.setItem(
 			LOCAL_STORAGE_KEY.STORAGE_CHAT_KEY,
 			JSON.stringify(chatMessages)
 		);
 	}
 
+	function extractContent(data) {
+		if (data.startsWith("b'") || data.startsWith('b"')) {
+			data = data.slice(2);
+		}
+		if (data.endsWith("'") || data.endsWith('"')) {
+			data = data.slice(0, -1);
+		}
+
+		if (data.includes("\\n")) {
+			if (data === "\\n") {
+				data = "";
+			} else {
+				data = data.replace(/\\n/g, "<br />");
+			}
+		}
+		return data;
+	}
+
 	const callTextStream = async (query: string) => {
 		const eventSource = await fetchTextStream(query, knowledge_1);
+		console.log("eventSource", eventSource);
 
 		eventSource.addEventListener("message", (e: any) => {
-			let currentMsg = e.data;
-            currentMsg = currentMsg.replace("@#$", " ")
+			let currentMsg = extractContent(e.data);
 			console.log("currentMsg", currentMsg);
+
+			currentMsg = currentMsg.replace("@#$", " ");
 			if (currentMsg == "[DONE]") {
 				console.log("done getCurrentTimeStamp", getCurrentTimeStamp);
 				let startTime = chatMessages[chatMessages.length - 1].time;
 
 				loading = false;
-				let totalTime = parseFloat(((getCurrentTimeStamp() - startTime) / 1000).toFixed(2));
+				let totalTime = parseFloat(
+					((getCurrentTimeStamp() - startTime) / 1000).toFixed(2)
+				);
 				console.log("done totalTime", totalTime);
 				console.log(
 					"chatMessages[chatMessages.length - 1]",
@@ -84,8 +106,6 @@
 				storeMessages();
 			} else {
 				if (chatMessages[chatMessages.length - 1].role == MessageRole.User) {
-					console.log("?", getCurrentTimeStamp());
-
 					chatMessages = [
 						...chatMessages,
 						{
@@ -93,13 +113,28 @@
 							type: MessageType.Text,
 							content: currentMsg,
 							time: getCurrentTimeStamp(),
+							first_token_latency: "0",
+							msecond_per_token: "0",
 						},
 					];
 					console.log("? chatMessages", chatMessages);
 				} else {
-					let content = chatMessages[chatMessages.length - 1].content as string;
-					chatMessages[chatMessages.length - 1].content =
-						content + currentMsg;
+					if (currentMsg.includes("first_token_latency")) {
+						const matchResult = currentMsg.match(/(\d+(\.\d{1,2})?)/);
+						const extractedNumber = parseFloat(matchResult[0]).toFixed(1);
+						chatMessages[chatMessages.length - 1].first_token_latency =
+							extractedNumber + " ms";
+					} else if (currentMsg.includes("msecond_per_token")) {
+						const matchResult = currentMsg.match(/(\d+(\.\d{1,2})?)/);
+						const extractedNumber = parseFloat(matchResult[0]).toFixed(1);
+						chatMessages[chatMessages.length - 1].msecond_per_token =
+							extractedNumber + " ms";
+					} else {
+						let content = chatMessages[chatMessages.length - 1]
+							.content as string;
+						chatMessages[chatMessages.length - 1].content =
+							content + currentMsg;
+					}
 				}
 				scrollToBottom(scrollToDiv);
 			}
@@ -147,7 +182,6 @@
 <div
 	class="h-full items-center gap-5 bg-white sm:flex sm:pb-2 lg:rounded-tl-3xl"
 >
-
 	<div class="mx-auto flex h-full w-full flex-col sm:mt-0 sm:w-[72%]">
 		<div
 			class="fixed relative flex w-full flex-col items-center justify-between bg-white p-2 pb-0"

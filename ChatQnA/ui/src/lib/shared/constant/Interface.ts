@@ -17,6 +17,8 @@ export interface Message {
 	type: MessageType,
 	content: Map<Message['type']>,
 	time: number,
+	first_token_latency: string,
+	msecond_per_token: string
 }
 
 export enum LOCAL_STORAGE_KEY {

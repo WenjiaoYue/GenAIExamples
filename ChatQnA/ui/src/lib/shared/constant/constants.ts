@@ -31,19 +31,19 @@ export const generateCommonVariables = (borderColor: string, bgColor:  string): 
 
 
 // Intel® Xeon® 6
-export const commonVariables = generateCommonVariables("border-[#00c7fd]", "bg-[#00c7fd]");
-export const cardContents = {
-	title1: "Intel® Xeon® 6",
-	subtitle1: "with Performance Cores",
-	title2: "Llama 2 70b",
-	bit: 4,
-	latency: "158",
-	lantencyContent: "Latency",
-	latencySubtitle: "ms",
-	reduction: "6.4X",
-	reductionSubtitle: "Next-Token Latency Versus 4ᵗʰ Gen Xeon® using 16 bit",
-  	lantencySubContent: "",
-};
+// export const commonVariables = generateCommonVariables("border-[#00c7fd]", "bg-[#00c7fd]");
+// export const cardContents = {
+// 	title1: "Intel® Xeon® 6",
+// 	subtitle1: "with Performance Cores",
+// 	title2: "Llama 2 70b",
+// 	bit: 4,
+// 	latency: "158",
+// 	lantencyContent: "Latency",
+// 	latencySubtitle: "ms",
+// 	reduction: "6.4X",
+// 	reductionSubtitle: "Next-Token Latency Versus 4ᵗʰ Gen Xeon® using 16 bit",
+//   	lantencySubContent: "",
+// };
 
 // 5ᵗʰ Gen Intel® Xeon® Processor
 // export const commonVariables = generateCommonVariables("border-[#6ddcff]", "bg-[#6ddcff]");
@@ -61,19 +61,19 @@ export const cardContents = {
 // };
 
 // 4ᵗʰ Gen Intel® Xeon® Processor
-// export const commonVariables =  generateCommonVariables("border-[#8bae46]", "bg-[#8bae46]");
-// export const cardContents = {
-// 	title1: "4ᵗʰ Gen Intel® Xeon® Processor",
-// 	subtitle1: "",
-// 	title2: "Llama 2 70b",
-// 	bit: 4,
-// 	latency: "192",
-// 	lantencyContent: "Latency",
-// 	latencySubtitle: "ms",
-// 	reduction: "3X",
-// 	reductionSubtitle: "Next-Token Latency Versus 16 bit format",
-// 	lantencySubContent: "",
-// };
+export const commonVariables =  generateCommonVariables("border-[#8bae46]", "bg-[#8bae46]");
+export const cardContents = {
+	title1: "4ᵗʰ Gen Intel® Xeon® Processor",
+	subtitle1: "",
+	title2: "Llama 2 70b",
+	bit: 4,
+	latency: "192",
+	lantencyContent: "Latency",
+	latencySubtitle: "ms",
+	reduction: "3X",
+	reductionSubtitle: "Next-Token Latency Versus 16 bit format",
+	lantencySubContent: "",
+};
 
 // 4ᵗʰ Gen Intel® Xeon® Processor
 // export const commonVariables =  generateCommonVariables("border-[#b1d272]", "bg-[#b1d272]");

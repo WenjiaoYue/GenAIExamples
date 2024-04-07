@@ -4,6 +4,8 @@
 		cardContents,
 	} from "$lib/shared/constant/constants";
 	import { latencyWritable } from "$lib/shared/stores/common/Store";
+	import IntelFooterLogo from "$lib/assets/svg/intelFooterLogo.svg";
+
 	const {
 		cardClass,
 		titleClass,
@@ -21,7 +23,7 @@
 </script>
 
 <div
-	class="mx-4 mt-6 flex h-full w-[15%] flex-col items-center gap-2 text-center font-light xl:mx-20 xl:gap-6 xl:pt-20"
+	class="relative mx-4 mt-6 flex h-full w-[15%] flex-col items-center gap-2 text-center font-light xl:mx-20 xl:gap-6 xl:pt-20"
 >
 	<div class={cardClass}>
 		<p class={titleClass}>{cardContents.title1}</p>
@@ -57,4 +59,7 @@
 			<p class={reductionSubtitleClass}>{cardContents.reductionSubtitle}</p>
 		</div>
 	{/if}
+	<img class="absolute bottom-3 right-0 w-[3.3rem]" src={IntelFooterLogo} alt="Your SVG" />
+
 </div>
+

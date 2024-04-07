@@ -1,7 +1,7 @@
 <script lang="ts">
 	export let overrideClasses = "";
 
-	const classes = overrideClasses ? overrideClasses : `w-5 h-5 text-gray-400`;
+	const classes = overrideClasses ? overrideClasses : `w-5 h-5 text-white`;
 </script>
 
 <!-- <svg
@@ -47,6 +47,6 @@
 	><path
 		d="M0 1024l106.496-474.112 588.8-36.864-588.8-39.936-106.496-473.088 1024 512z"
 		p-id="4587"
-		fill="#0068b5"
+		fill="#fff"
 	/></svg
 >

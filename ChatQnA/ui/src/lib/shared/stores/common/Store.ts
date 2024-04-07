@@ -23,3 +23,5 @@ export const knowledge1 = writable<{
 }>();
 
 export const knowledgeName = writable("");
+
+export const latencyWritable = writable('0');

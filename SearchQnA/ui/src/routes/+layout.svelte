@@ -38,7 +38,7 @@
 
 <Notifications>
 	<Layout>
-		<div class="flex h-full flex-col">
+		<div class="flex  h-full  flex-col">
 			<div class="h-0 grow bg-white  lg:rounded-tl-3xl">
 				<slot />
 			</div>

@@ -20,12 +20,12 @@
 
 <header class="sticky top-0 z-40 mx-auto w-full flex-none bg-[#1f2029]">
 	<nav
-		class="w-full divide-gray-200 border-gray-200 bg-[#1f2029] px-2 py-1.5 text-gray-500 dark:divide-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 sm:px-4"
+		class="w-full divide-gray-200 border-gray-200 bg-[#1f2029] px-2 py-1 text-gray-500 dark:divide-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 sm:px-4"
 	>
 		<div class="mx-auto flex w-full flex-wrap items-center justify-between">
 			<IntelLogo />
 			<span
-				class="ml-4 self-center whitespace-nowrap text-2xl font-semibold text-white"
+				class="ml-4 self-center whitespace-nowrap text-xl font-semibold text-white xl:text-2xl"
 				data-svelte-h="svelte-1hbktnk">ChatBot</span
 			>
 		</div>

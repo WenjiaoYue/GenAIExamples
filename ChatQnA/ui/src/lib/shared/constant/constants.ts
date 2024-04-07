@@ -14,24 +14,24 @@ interface CommonVariables {
   latencySubContentClass: string;
 }
 
-export const generateCommonVariables = (borderColor: string): CommonVariables => ({
-  cardClass: `w-full border-2 border-solid border-${borderColor} p-2 text-white`,
-  titleClass: "text-xl",
-  subtitleClass: "text-xs",
-  borderBClass: `border-b-2 border-${borderColor} pb-2 text-xl leading-tight`,
-  latencyContainerClass: `w-full border-2 border-solid border-${borderColor}`,
-  latencyValueClass: `text-xl bg-${borderColor} p-2`,
-  latencySubtitleClass: "py-1 text-lg text-white",
-  reductionClass: `bg-${borderColor} p-2`,
+export const generateCommonVariables = (borderColor: string, bgColor:  string): CommonVariables => ({
+  cardClass: `w-full border-2 border-solid ${borderColor} p-1 text-white xl:p-6`,
+  titleClass: "text-xl xl:text-2xl",
+  subtitleClass: "text-xs xl:text-base",
+  borderBClass: `border-b-2 ${borderColor} pb-2 text-xl leading-tight  xl:pb-4 xl:text-2xl xl:leading-normal`,
+  latencyContainerClass: `w-full border-2 border-solid ${borderColor}`,
+  latencyValueClass: `text-xl ${bgColor} p-2  xl:p-6 xl:text-2xl`,
+  latencySubtitleClass: "py-1 text-lg text-white xl:text-xl xl:py-4",
+  reductionClass: `${bgColor} p-2  xl:p-6`,
   reductionValueClass: "text-2xl",
-  reductionSubtitleClass: "text-xs leading-tight",
-  borderClass: `border-2 border-${borderColor} px-2 text-xl font-normal`,
-  latencySubContentClass: "text-xs text-white pt-2",
+  reductionSubtitleClass: "text-xs leading-tight xl:text-base",
+  borderClass: `border-2 ${borderColor} px-2 text-xl font-normal  xl:px-6 xl:text-2xl`,
+  latencySubContentClass: "text-xs text-white pt-2  xl:pt-6 xl:pt-4 xl:text-base",
 });
 
 
 // Intel® Xeon® 6
-export const commonVariables = generateCommonVariables("[#00c7fd]");
+export const commonVariables = generateCommonVariables("border-[#00c7fd]", "bg-[#00c7fd]");
 export const cardContents = {
 	title1: "Intel® Xeon® 6",
 	subtitle1: "with Performance Cores",
@@ -46,7 +46,7 @@ export const cardContents = {
 };
 
 // 5ᵗʰ Gen Intel® Xeon® Processor
-// export const commonVariables = generateCommonVariables("[#6ddcff]");
+// export const commonVariables = generateCommonVariables("border-[#6ddcff]", "bg-[#6ddcff]");
 // export const cardContents = {
 // 	title1: "5ᵗʰ Gen Intel® Xeon® Processor",
 // 	subtitle1: "",
@@ -61,7 +61,7 @@ export const cardContents = {
 // };
 
 // 4ᵗʰ Gen Intel® Xeon® Processor
-// export const commonVariables = generateCommonVariables("[#8bae46]");
+// export const commonVariables =  generateCommonVariables("border-[#8bae46]", "bg-[#8bae46]");
 // export const cardContents = {
 // 	title1: "4ᵗʰ Gen Intel® Xeon® Processor",
 // 	subtitle1: "",
@@ -76,7 +76,7 @@ export const cardContents = {
 // };
 
 // 4ᵗʰ Gen Intel® Xeon® Processor
-// export const commonVariables = generateCommonVariables("[#b1d272]");
+// export const commonVariables =  generateCommonVariables("border-[#b1d272]", "bg-[#b1d272]");
 
 // export const cardContents = {
 // 	title1: "4ᵗʰ Gen Intel® Xeon® Processor",

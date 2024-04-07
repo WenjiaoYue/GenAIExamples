@@ -16,8 +16,8 @@
 
 <svg
 aria-hidden="true"
-class="intel-brand-logo"
-width="75"
+class="intel-brand-logo xl:w-20 xl:h-20"
+width="50"
 height="50"
 viewBox="0 0 103 42"
 >

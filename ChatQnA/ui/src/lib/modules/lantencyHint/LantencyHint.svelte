@@ -21,7 +21,7 @@
 </script>
 
 <div
-	class="mx-4 mt-6 flex h-full w-[15%] flex-col items-center gap-2 text-center font-light"
+	class="mx-4 mt-6 flex h-full w-[15%] flex-col items-center gap-2 text-center font-light xl:mx-20 xl:gap-6 xl:pt-20"
 >
 	<div class={cardClass}>
 		<p class={titleClass}>{cardContents.title1}</p>
@@ -37,10 +37,11 @@
 
 	<div class={latencyContainerClass}>
 		<p class={latencyValueClass}>
-			{#if $latencyWritable !== '0'}
+			{#if $latencyWritable !== "0"}
 				<span>{$latencyWritable}</span>
+
+				{cardContents.latencySubtitle}
 			{/if}
-			{cardContents.latencySubtitle}
 		</p>
 		{#if cardContents.lantencySubContent !== ""}
 			<p class={latencySubContentClass}>{cardContents.lantencySubContent}</p>

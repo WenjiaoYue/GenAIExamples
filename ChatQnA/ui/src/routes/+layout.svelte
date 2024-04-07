@@ -21,7 +21,10 @@
 </script>
 
 <Notifications>
+	<div class="flex h-full flex-col" 	style="background-image: url('/src/lib/assets/png/ChatBot_Background.png'); background-size: cover; background-position: center;"
+	>
 		<Header />
 		<slot />
 		<Footer />
+	</div>
 </Notifications>

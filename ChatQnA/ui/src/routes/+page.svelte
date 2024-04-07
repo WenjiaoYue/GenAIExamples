@@ -186,12 +186,11 @@
 </script>
 
 <div
-	class="flex h-full flex-col"
-	style="background-image: url('/src/lib/assets/png/ChatBot_Background.png'); background-size: cover; background-position: center;"
+	class="flex flex-col grow"
 >
 	<div class="relative h-full items-center gap-5 bg-fixed sm:flex">
 		<div
-			class="relative ml-[12%] flex h-full w-full flex-col sm:mt-0 sm:w-[66%]"
+			class="relative h-full ml-[12%] flex  w-full flex-col sm:mt-0 sm:w-[66%]"
 		>
 			<div
 				class="fixed relative flex w-full flex-col items-center justify-between px-2"
@@ -259,7 +258,7 @@
 					{/each}
 				</Scrollbar>
 				<!-- Loading text -->
-				{#if !loading}
+				{#if loading}
 					<LoadingAnimation />
 				{/if}
 			</div>

@@ -1,7 +1,6 @@
 <script lang="ts">
 	export let data;
 	import {
-		ifStoreMsg,
 		knowledge1,
 		latencyWritable,
 	} from "$lib/shared/stores/common/Store";
@@ -13,20 +12,16 @@
 		type Message,
 	} from "$lib/shared/constant/Interface";
 	import {
-		fromTimeStampToTime,
 		getCurrentTimeStamp,
 		scrollToBottom,
 		scrollToTop,
 	} from "$lib/shared/Utils";
 	import { fetchTextStream } from "$lib/network/chat/Network";
 	import LoadingAnimation from "$lib/shared/components/loading/Loading.svelte";
-	import { browser } from "$app/environment";
 	import "driver.js/dist/driver.css";
 	import "$lib/assets/layout/css/driver.css";
-	import UploadFile from "$lib/shared/components/upload/uploadFile.svelte";
 	import PaperAirplane from "$lib/assets/chat/svelte/PaperAirplane.svelte";
 	import Clear from "$lib/assets/chat/svelte/ChatBot_Latency_Clear_button.svg";
-	import Gallery from "$lib/shared/components/chat/gallery.svelte";
 	import Scrollbar from "$lib/shared/components/scrollbar/Scrollbar.svelte";
 	import ChatMessage from "$lib/modules/chat/ChatMessage.svelte";
 	import LantencyHint from "$lib/modules/lantencyHint/LantencyHint.svelte";
@@ -175,14 +170,6 @@
 		chatMessages = [];
 	}
 
-	function isEmptyObject(obj: any): boolean {
-		for (let key in obj) {
-			if (obj.hasOwnProperty(key)) {
-				return false;
-			}
-		}
-		return true;
-	}
 </script>
 
 <div
@@ -262,7 +249,6 @@
 					<LoadingAnimation />
 				{/if}
 			</div>
-			<!-- gallery -->
 		</div>
 		<!-- right Hint -->
 		<LantencyHint />

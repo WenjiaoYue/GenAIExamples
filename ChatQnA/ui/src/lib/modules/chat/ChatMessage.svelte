@@ -16,8 +16,8 @@
 >
 	<div
 		class={msg.role === 0
-			? "flex aspect-square w-[1.5px]   items-center justify-center rounded bg-[#10748f] max-sm:hidden"
-			: "flex aspect-square h-10 w-[3px]  items-center justify-center rounded bg-[#00c7fd] max-sm:hidden"}
+			? "flex aspect-square w-[0.16rem]   items-center justify-center rounded bg-[#10748f] max-sm:hidden"
+			: "flex aspect-square h-10 w-[0.28rem]  items-center justify-center rounded bg-[#00c7fd] max-sm:hidden"}
 	>
 		<MessageAvatar role={msg.role} />
 	</div>

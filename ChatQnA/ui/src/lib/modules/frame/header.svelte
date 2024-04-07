@@ -25,7 +25,7 @@
 		<div class="mx-auto flex w-full flex-wrap items-center justify-between">
 			<IntelLogo />
 			<span
-				class="ml-4 self-center whitespace-nowrap text-xl font-semibold text-white xl:text-2xl"
+				class="ml-4 self-center whitespace-nowrap text-[1.3rem] font-semibold text-white"
 				data-svelte-h="svelte-1hbktnk">ChatBot</span
 			>
 		</div>

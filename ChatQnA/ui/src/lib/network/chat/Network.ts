@@ -1,7 +1,7 @@
 import { env } from "$env/dynamic/public";
 import { SSE } from "sse.js";
 
-const DOC_BASE_URL = env.DOC_BASE_URL;
+const DOC_BASE_URL = env.BASE_URL;
 
 
 export async function fetchTextStream(

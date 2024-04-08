@@ -50,8 +50,9 @@
         logs.forEach((log: { op: string; path: string; value: any }) => {
           if (log.op === "add") {
             if (
-              log.path.endsWith("/streamed_output/-") && typeof log.value === "string"
-            ) {
+              log.value !== "</s>" && log.path.endsWith("/streamed_output/-") && log.path.length > "/streamed_output/-".length
+              )
+              {
               messages += log.value;
               scrollToBottom(scrollToDiv)
             }
@@ -82,10 +83,15 @@
 
 <div class="h-full">
   <Header />
-  <p class="m-7 sm:mb-0 text-gray-500 font-semibold xl:m-8">Please upload file or paste content for summarization.</p>
+  <p class="m-7 sm:mb-0 text-gray-500 font-semibold xl:m-8">
+    Please upload file or paste content for summarization.
+  </p>
   <div class="mt-2 m-6 grid grid-cols-3 gap-8 h-full">
     <div class="col-span-2 h-full">
-      <Doc on:generateSummary={handleGenerateSummary} on:clearMsg={handleClearMsg}/>
+      <Doc
+        on:generateSummary={handleGenerateSummary}
+        on:clearMsg={handleClearMsg}
+      />
     </div>
     <div class="col-span-1">
       <Summary chatMessage={messages} />

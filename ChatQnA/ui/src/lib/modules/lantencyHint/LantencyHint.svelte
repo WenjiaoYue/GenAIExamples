@@ -21,9 +21,10 @@
 		reductionSubtitleClass,
 	} = commonVariables;
 </script>
+<!-- class="relative mx-[2.4rem] pt-[2rem] flex h-full w-[15%] flex-col items-center gap-[0.5rem] text-center font-light xl:gap-[1rem] xl:pt-[2.3rem]" -->
 
 <div
-	class="relative mx-[2.4rem] pt-[2rem] flex h-full w-[15%] flex-col items-center gap-[0.5rem] text-center font-light xl:gap-[1rem] xl:pt-[2.3rem]"
+class="relative mx-[2.4rem] pt-[2rem] flex h-full w-[15%] flex-col items-center gap-[0.5rem] text-center font-light"
 >
 	<div class={cardClass}>
 		<p class={titleClass}>{cardContents.title1}</p>
@@ -46,7 +47,7 @@
 			{/if}
 		</p>
 		{#if cardContents.lantencySubContent !== ""}
-			<p class={latencySubContentClass}>{cardContents.lantencySubContent}</p>
+			<span class={latencySubContentClass}>{cardContents.lantencySubContent}</span>
 		{/if}
 		<p class={latencySubtitleClass}>{cardContents.lantencyContent}</p>
 	</div>
@@ -59,7 +60,9 @@
 			<p class={reductionSubtitleClass}>{cardContents.reductionSubtitle}</p>
 		</div>
 	{/if}
-	<img class="absolute bottom-[1.5rem] xl:bottom-[2rem] right-0 w-[3.3rem] xl:w-[3.5rem]" src={IntelFooterLogo} alt="Your SVG" />
+	<img class="absolute bottom-0 right-0 w-[3.3rem] xl:w-[3rem]" src={IntelFooterLogo} alt="Your SVG" />
+
+	<!-- <img class="absolute bottom-[1.5rem] xl:bottom-[2rem] right-0 w-[3.3rem] xl:w-[3.5rem]" src={IntelFooterLogo} alt="Your SVG" /> -->
 
 </div>
 

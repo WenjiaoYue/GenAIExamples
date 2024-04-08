@@ -27,7 +27,6 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-neverthrow": "1.1.4",
     "eslint-plugin-svelte3": "^4.0.0",
-    "flowbite-svelte": "^0.44.4",
     "postcss": "^8.4.23",
     "postcss-load-config": "^4.0.1",
     "postcss-preset-env": "^8.3.2",
@@ -53,6 +52,7 @@
     "ramda": "^0.29.0",
     "sse.js": "^0.6.1",
     "svelte-notifications": "^0.9.98",
+    "flowbite-svelte": "^0.38.5",
     "svrollbar": "^0.12.0"
   }
 }

@@ -24,7 +24,7 @@
 <!-- class="relative mx-[2.4rem] pt-[2rem] flex h-full w-[15%] flex-col items-center gap-[0.5rem] text-center font-light xl:gap-[1rem] xl:pt-[2.3rem]" -->
 
 <div
-class="relative mx-[2.4rem] pt-[2rem] flex h-full w-[15%] flex-col items-center gap-[0.5rem] text-center font-light"
+class="relative mx-[2.8rem]  pt-[2.8rem] flex h-full w-[16.7%] flex-col items-center gap-[0.5rem] text-center font-light"
 >
 	<div class={cardClass}>
 		<p class={titleClass}>{cardContents.title1}</p>
@@ -60,9 +60,10 @@ class="relative mx-[2.4rem] pt-[2rem] flex h-full w-[15%] flex-col items-center 
 			<p class={reductionSubtitleClass}>{cardContents.reductionSubtitle}</p>
 		</div>
 	{/if}
-	<img class="absolute bottom-0 right-0 w-[3.3rem] xl:w-[3rem]" src={IntelFooterLogo} alt="Your SVG" />
+	<img class="absolute bottom-[4.3rem] right-0 w-[2.9rem]" src={IntelFooterLogo} alt="Your SVG" />
+	<!-- footer -->
+	<!-- <img class="absolute bottom-[2.5rem] right-0 w-[2.9rem]" src={IntelFooterLogo} alt="Your SVG" /> -->
 
-	<!-- <img class="absolute bottom-[1.5rem] xl:bottom-[2rem] right-0 w-[3.3rem] xl:w-[3.5rem]" src={IntelFooterLogo} alt="Your SVG" /> -->
 
 </div>
 

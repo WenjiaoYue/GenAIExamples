@@ -13,6 +13,6 @@
 	>
 		<Header />
 		<slot />
-		<Footer />
+		<!-- <Footer /> -->
 	</div>
 </Notifications>

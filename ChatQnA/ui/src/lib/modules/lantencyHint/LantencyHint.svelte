@@ -33,15 +33,15 @@ class="relative mx-[2.8rem]  pt-[2.8rem] flex h-full w-[16.7%] flex-col items-ce
 
 	<div class={cardClass}>
 		<p class={borderBClass}>{cardContents.title2}</p>
-		<p class="mt-2">
-			<span class={borderClass}>{cardContents.bit}</span> bit format
+		<p class="mt-[0.5rem]">
+			<span class={borderClass}>{cardContents.bit}</span> <span class="text-[1.3rem]"> bit format</span> 
 		</p>
 	</div>
 
 	<div class={latencyContainerClass}>
 		<p class={latencyValueClass}>
 			{#if $latencyWritable !== "0"}
-				<span>{$latencyWritable}</span>
+				<span class="text-[2rem]">{$latencyWritable}</span>
 
 				{cardContents.latencySubtitle}
 			{/if}
@@ -60,9 +60,9 @@ class="relative mx-[2.8rem]  pt-[2.8rem] flex h-full w-[16.7%] flex-col items-ce
 			<p class={reductionSubtitleClass}>{cardContents.reductionSubtitle}</p>
 		</div>
 	{/if}
-	<img class="absolute bottom-[4.3rem] right-0 w-[2.9rem]" src={IntelFooterLogo} alt="Your SVG" />
+	<img class="absolute bottom-[4.3rem] right-0 w-[3rem]" src={IntelFooterLogo} alt="Your SVG" />
 	<!-- footer -->
-	<!-- <img class="absolute bottom-[2.5rem] right-0 w-[2.9rem]" src={IntelFooterLogo} alt="Your SVG" /> -->
+	<!-- <img class="absolute bottom-[2.5rem] right-0 w-[3rem]" src={IntelFooterLogo} alt="Your SVG" /> -->
 
 
 </div>

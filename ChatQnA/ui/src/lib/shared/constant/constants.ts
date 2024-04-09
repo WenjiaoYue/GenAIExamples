@@ -26,7 +26,7 @@ export const generateCommonVariables = (borderColor: string, bgColor:  string): 
   reductionValueClass: "text-[2rem]",
   reductionSubtitleClass: "text-[0.8rem] leading-tight ",
   borderClass: `border-[0.1rem] ${borderColor} mr-[0.4rem] py-[0.1rem] px-[0.7rem] text-[1.3rem] font-normal`,
-  latencySubContentClass: "text-[0.9rem] text-white absolute bottom-[2.8rem] right-[4.5rem]",
+  latencySubContentClass: "text-[0.9rem] text-white absolute bottom-[2.8rem] right-[4.8rem]",
 });
 
 // export const generateCommonVariables = (borderColor: string, bgColor:  string): CommonVariables => ({

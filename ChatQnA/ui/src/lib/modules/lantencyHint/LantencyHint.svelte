@@ -67,7 +67,7 @@ class="relative mx-[2.8rem]  pt-[2.8rem] flex h-full w-[16.7%] flex-col items-ce
 	<!-- 6th -->
 	<!-- <img class="absolute bottom-[4.3rem] right-0 w-[4rem]" src={intelFooterLogoXeon} alt="Your SVG" /> -->
 	<!-- footer -->
-	<img class="absolute bottom-[2.5rem] right-0 w-[4rem]" src={IntelFooterLogo} alt="Your SVG" />
+	<img class="absolute bottom-[2.5rem] right-0 w-[4rem]" src={intelFooterLogoXeon} alt="Your SVG" />
 
 
 </div>

@@ -46,34 +46,34 @@ export const generateCommonVariables = (borderColor: string, bgColor:  string): 
 
 
 // Intel® Xeon® 6
-export const commonVariables = generateCommonVariables("border-[#00c7fd]", "bg-[#00c7fd]");
-export const cardContents = {
-	title1: "Intel® Xeon® 6",
-	subtitle1: "with Performance Cores",
-	title2: "Llama 2 70b",
-	bit: 4,
-	latency: "158",
-	lantencyContent: "Latency",
-	latencySubtitle: "ms",
-	reduction: "6.4X",
-	reductionSubtitle: "Next-Token Latency Versus 4ᵗʰ Gen Xeon® using 16 bit",
-  	lantencySubContent: "",
-};
-
-// 5ᵗʰ Gen Intel® Xeon® Processor
-// export const commonVariables = generateCommonVariables("border-[#6ddcff]", "bg-[#6ddcff]");
+// export const commonVariables = generateCommonVariables("border-[#00c7fd]", "bg-[#00c7fd]");
 // export const cardContents = {
-// 	title1: "5ᵗʰ Gen Intel® Xeon® Processor",
-// 	subtitle1: "",
+// 	title1: "Intel® Xeon® 6",
+// 	subtitle1: "with Performance Cores",
 // 	title2: "Llama 2 70b",
 // 	bit: 4,
-// 	latency: "159",
+// 	latency: "158",
 // 	lantencyContent: "Latency",
 // 	latencySubtitle: "ms",
-// 	reduction: "3.6X",
+// 	reduction: "6.4X",
 // 	reductionSubtitle: "Next-Token Latency Versus 4ᵗʰ Gen Xeon® using 16 bit",
-// 	lantencySubContent: "",
+//   	lantencySubContent: "",
 // };
+
+// 5ᵗʰ Gen Intel® Xeon® Processor
+export const commonVariables = generateCommonVariables("border-[#6ddcff]", "bg-[#6ddcff]");
+export const cardContents = {
+	title1: "5ᵗʰ Gen Intel® Xeon® Processor",
+	subtitle1: "",
+	title2: "Llama 2 70b",
+	bit: 4,
+	latency: "159",
+	lantencyContent: "Latency",
+	latencySubtitle: "ms",
+	reduction: "3.6X",
+	reductionSubtitle: "Next-Token Latency Versus 4ᵗʰ Gen Xeon® using 16 bit",
+	lantencySubContent: "",
+};
 
 // 4ᵗʰ Gen Intel® Xeon® Processor
 // export const commonVariables =  generateCommonVariables("border-[#8bae46]", "bg-[#8bae46]");

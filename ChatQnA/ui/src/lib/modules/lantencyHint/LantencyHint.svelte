@@ -22,10 +22,9 @@
 		reductionSubtitleClass,
 	} = commonVariables;
 </script>
-<!-- class="relative mx-[2.4rem] pt-[2rem] flex h-full w-[15%] flex-col items-center gap-[0.5rem] text-center font-light xl:gap-[1rem] xl:pt-[2.3rem]" -->
 
 <div
-class="relative mx-[2.8rem]  pt-[2.8rem] flex h-full w-[16.7%] flex-col items-center gap-[0.5rem] text-center font-light"
+	class="font-intel-light relative mx-[2.8rem] flex h-full w-[16.7%] flex-col items-center gap-[0.5rem] pt-[2.8rem] text-center font-light"
 >
 	<div class={cardClass}>
 		<p class={titleClass}>{cardContents.title1}</p>
@@ -35,7 +34,8 @@ class="relative mx-[2.8rem]  pt-[2.8rem] flex h-full w-[16.7%] flex-col items-ce
 	<div class={cardClass}>
 		<p class={borderBClass}>{cardContents.title2}</p>
 		<p class="mt-[0.5rem]">
-			<span class={borderClass}>{cardContents.bit}</span> <span class="text-[1.3rem]"> bit format</span> 
+			<span class={borderClass}>{cardContents.bit}</span>
+			<span class="text-[1.3rem]"> bit format</span>
 		</p>
 	</div>
 
@@ -47,12 +47,15 @@ class="relative mx-[2.8rem]  pt-[2.8rem] flex h-full w-[16.7%] flex-col items-ce
 				{cardContents.latencySubtitle}
 			{/if}
 		</p>
-		{#if cardContents.lantencySubContent !== ""}
-			<span class={latencySubContentClass}>{cardContents.lantencySubContent}</span>
-			<p class="mb-[0.5rem] w-full "></p>
 
-		{/if}
-		<p class={latencySubtitleClass}>{cardContents.lantencyContent}</p>
+		<p class={latencySubtitleClass}>
+			{#if cardContents.lantencySubContent !== ""}
+				<span class={latencySubContentClass}
+					>{cardContents.lantencySubContent}</span
+				>
+			{/if}
+			{cardContents.lantencyContent}
+		</p>
 	</div>
 
 	{#if cardContents.reduction !== ""}
@@ -67,8 +70,9 @@ class="relative mx-[2.8rem]  pt-[2.8rem] flex h-full w-[16.7%] flex-col items-ce
 	<!-- 6th -->
 	<!-- <img class="absolute bottom-[4.3rem] right-0 w-[4rem]" src={intelFooterLogoXeon} alt="Your SVG" /> -->
 	<!-- footer -->
-	<img class="absolute bottom-[2.5rem] right-0 w-[4rem]" src={intelFooterLogoXeon} alt="Your SVG" />
-
-
+	<img
+		class="absolute bottom-[2.5rem] right-0 w-[4rem]"
+		src={intelFooterLogoXeon}
+		alt="Your SVG"
+	/>
 </div>
-

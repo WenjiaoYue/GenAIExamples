@@ -16,8 +16,8 @@ interface CommonVariables {
 
 export const generateCommonVariables = (borderColor: string, bgColor:  string): CommonVariables => ({
   cardClass: `w-full border-[0.1rem] border-solid ${borderColor} p-[0.8rem] text-white`,
-  titleClass: "text-[1.3rem] font-intel-medium leading-5",
-  subtitleClass: "text-[0.9rem] ",
+  titleClass: "text-[1.4rem] font-intel-medium leading-5 py-[0.2rem]",
+  subtitleClass: "text-[0.9rem] pt-[0.3rem]",
   borderBClass: `border-b-[0.1rem] ${borderColor} pb-[0.8rem] text-[1.4rem]  leading-tight `,
   latencyContainerClass: `relative w-full border-[0.1rem]  border-solid ${borderColor}`,
   latencyValueClass: `text-[1.1rem] ${bgColor}  h-[3rem]`,

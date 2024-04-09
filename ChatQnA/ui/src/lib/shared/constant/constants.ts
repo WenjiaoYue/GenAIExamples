@@ -16,17 +16,17 @@ interface CommonVariables {
 
 export const generateCommonVariables = (borderColor: string, bgColor:  string): CommonVariables => ({
   cardClass: `w-full border-[0.1rem] border-solid ${borderColor} p-[0.8rem] text-white`,
-  titleClass: "text-[1.4rem]",
-  subtitleClass: "text-[0.8rem] ",
+  titleClass: "text-[1.3rem] font-intel-medium leading-5",
+  subtitleClass: "text-[0.9rem] ",
   borderBClass: `border-b-[0.1rem] ${borderColor} pb-[0.8rem] text-[1.4rem]  leading-tight `,
-  latencyContainerClass: `w-full border-[0.1rem]  border-solid ${borderColor}`,
+  latencyContainerClass: `relative w-full border-[0.1rem]  border-solid ${borderColor}`,
   latencyValueClass: `text-[1.1rem] ${bgColor}  h-[3rem]`,
-  latencySubtitleClass: "pb-[1rem] text-[1.4rem] text-white ",
-  reductionClass: `${bgColor} p-[1.2rem] `,
+  latencySubtitleClass: "pt-[0.5rem] pb-[1rem] text-[1.5rem] text-white ",
+  reductionClass: `${bgColor} p-[1rem] `,
   reductionValueClass: "text-[2rem]",
   reductionSubtitleClass: "text-[0.8rem] leading-tight ",
   borderClass: `border-[0.1rem] ${borderColor} mr-[0.4rem] py-[0.1rem] px-[0.7rem] text-[1.3rem] font-normal`,
-  latencySubContentClass: "text-[1rem] text-white pt-[1rem]",
+  latencySubContentClass: "text-[0.9rem] text-white absolute bottom-[2.8rem] right-[4.5rem]",
 });
 
 // export const generateCommonVariables = (borderColor: string, bgColor:  string): CommonVariables => ({

@@ -76,32 +76,32 @@ export const generateCommonVariables = (borderColor: string, bgColor:  string): 
 // };
 
 // 4ᵗʰ Gen Intel® Xeon® Processor
-export const commonVariables =  generateCommonVariables("border-[#8bae46]", "bg-[#8bae46]");
-export const cardContents = {
-	title1: "4ᵗʰ Gen Intel® Xeon® Processor",
-	subtitle1: "",
-	title2: "Llama 2 70b",
-	bit: 4,
-	latency: "192",
-	lantencyContent: "Latency",
-	latencySubtitle: "ms",
-	reduction: "3X",
-	reductionSubtitle: "Next-Token Latency Versus 16 bit format",
-	lantencySubContent: "",
-};
-
-// 4ᵗʰ Gen Intel® Xeon® Processor
-// export const commonVariables =  generateCommonVariables("border-[#b1d272]", "bg-[#b1d272]");
-
+// export const commonVariables =  generateCommonVariables("border-[#8bae46]", "bg-[#8bae46]");
 // export const cardContents = {
 // 	title1: "4ᵗʰ Gen Intel® Xeon® Processor",
 // 	subtitle1: "",
 // 	title2: "Llama 2 70b",
-// 	bit: 16,
-// 	latency: "566",
-// 	lantencySubContent: "Next-Token",
+// 	bit: 4,
+// 	latency: "192",
 // 	lantencyContent: "Latency",
 // 	latencySubtitle: "ms",
-// 	reduction: "",
-// 	reductionSubtitle: "",
+// 	reduction: "3X",
+// 	reductionSubtitle: "Next-Token Latency Versus 16 bit format",
+// 	lantencySubContent: "",
 // };
+
+// 4ᵗʰ Gen Intel® Xeon® Processor
+export const commonVariables =  generateCommonVariables("border-[#b1d272]", "bg-[#b1d272]");
+
+export const cardContents = {
+	title1: "4ᵗʰ Gen Intel® Xeon® Processor",
+	subtitle1: "",
+	title2: "Llama 2 70b",
+	bit: 16,
+	latency: "566",
+	lantencySubContent: "Next-Token",
+	lantencyContent: "Latency",
+	latencySubtitle: "ms",
+	reduction: "",
+	reductionSubtitle: "",
+};

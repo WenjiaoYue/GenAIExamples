@@ -5,7 +5,7 @@ import { test, expect, type Page } from "@playwright/test";
 
 // Initialization before each test
 test.beforeEach(async ({ page }) => {
-  await page.goto("/");
+	await page.goto("/");
 });
 
 // Constants definition
@@ -22,8 +22,8 @@ async function enterMessageToChat(page: Page, message: string) {
 
 // Test description: New Code Gen
 test.describe("New Code Gen", () => {
-  // Test: Enter message to summary
-  test("should enter message to generate code gen", async ({ page }) => {
-    await enterMessageToChat(page, CHAT_ITEMS[0]);
-  });
+	// Test: Enter message to summary
+	test("should enter message to generate code gen", async ({ page }) => {
+		await enterMessageToChat(page, CHAT_ITEMS[0]);
+	});
 });

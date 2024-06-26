@@ -98,9 +98,10 @@
 				} else if (/\\u[\dA-Fa-f]{4}/.test(currentMsg)) {
 					currentMsg = decodeUnicode(currentMsg);
 				}
-				if (currentMsg !== "</s>") {
-					currentMsg = currentMsg.replace(/\\n/g, "\n");
-				}
+				console.log('currentMsg', currentMsg);
+				
+				currentMsg = currentMsg.replace(/\\n/g, "\n");
+
 
 				if (chatMessages[chatMessages.length - 1].role == MessageRole.User) {
 					chatMessages = [

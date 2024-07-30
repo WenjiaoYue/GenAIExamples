@@ -109,6 +109,7 @@
 <!-- Voice button -->
 <button
 	type="submit"
+	data-testid="audio-input"
 	on:click={toggleRecording}
 >
 	{#if isRecording}
